@@ -1,0 +1,17 @@
+# AcroNet ProGuard Rules
+# ── BRAMBLE ENGINE (READ-ONLY — DO NOT STRIP) ──
+-keep class org.briarproject.bramble.** { *; }
+-keep class org.briarproject.briar.** { *; }
+-keep class org.briarproject.onionwrapper.** { *; }
+
+# ── DAGGER 2 ──
+-keep class dagger.** { *; }
+-keep class javax.inject.** { *; }
+-keep class com.acronet.app.DaggerAcroNetComponent { *; }
+-keep class com.acronet.app.DaggerAcroNetComponent$Builder { *; }
+
+# ── ACRONET ──
+-keep class com.acronet.app.** { *; }
+
+# ── LOGGING (IGNORE MISSING BINDERS) ──
+-dontwarn org.slf4j.**

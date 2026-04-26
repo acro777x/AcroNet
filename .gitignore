@@ -1,0 +1,24 @@
+# Android
+build/
+.gradle/
+local.properties
+*.apk
+*.jks
+
+# Node
+node_modules/
+npm-debug.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS & Media
+.DS_Store
+Thumbs.db
+*.mp4
+*.mov
+*.wav
+*.mp3
+
