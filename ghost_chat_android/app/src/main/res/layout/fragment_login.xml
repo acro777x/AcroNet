@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_mesh_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/login_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingStart="28dp"
+            android:paddingEnd="28dp"
+            android:paddingTop="80dp"
+            android:paddingBottom="40dp">
+
+            <!-- Ghost Logo with glow ring -->
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Glow Ring -->
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/logo_bg"
+                    android:alpha="0.3" />
+
+                <!-- Ghost Emoji -->
+                <TextView
+                    android:id="@+id/logo_emoji"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="👻"
+                    android:textSize="48sp"
+                    android:background="@drawable/logo_bg" />
+            </FrameLayout>
+
+            <!-- App Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghost Chat"
+                android:textColor="@color/text_primary"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02" />
+
+            <!-- Subtitle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Military-Grade Encrypted Mesh"
+                android:textColor="@color/accent_cyan"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Security badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔒 AES-256-GCM  •  E2E Encrypted  •  Zero-Knowledge"
+                android:textColor="@color/text_hint"
+                android:textSize="10sp"
+                android:layout_marginBottom="48dp" />
+
+            <!-- Glass Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/glass_card_bg"
+                android:padding="24dp">
+
+                <!-- Alias Input -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CALLSIGN"
+                    android:textColor="@color/accent_blue_light"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/et_alias"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/input_neon_bg"
+                    android:hint="Enter your alias"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:layout_marginBottom="18dp" />
+
+                <!-- Key Input -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ROOM KEY"
+                    android:textColor="@color/accent_blue_light"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="6dp" />
+
+                <EditText
+                    android:id="@+id/et_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/input_neon_bg"
+                    android:hint="AES-256 decryption key"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Error Label -->
+                <TextView
+                    android:id="@+id/tv_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/error_red"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Login Button -->
+                <Button
+                    android:id="@+id/btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="INITIALIZE UPLINK"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.1"
+                    android:background="@drawable/btn_neon_gradient"
+                    android:elevation="4dp"
+                    android:layout_marginTop="8dp" />
+
+                <!-- Scan QR Button -->
+                <Button
+                    android:id="@+id/btn_scan_qr"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="SCAN QR TO JOIN"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:letterSpacing="0.1"
+                    android:background="@drawable/chat_input_bg"
+                    android:elevation="0dp"
+                    android:layout_marginTop="12dp" />
+
+            </LinearLayout>
+
+            <!-- Connection status -->
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect to Ghost_Net WiFi first"
+                android:textColor="@color/text_hint"
+                android:textSize="11sp"
+                android:layout_marginTop="24dp" />
+
+            <!-- Version -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ghost Chat v2.0  •  Team Scrapyard"
+                android:textColor="@color/text_muted"
+                android:textSize="10sp"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

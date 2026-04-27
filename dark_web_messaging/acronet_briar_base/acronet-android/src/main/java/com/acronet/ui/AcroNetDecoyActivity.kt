@@ -240,18 +240,23 @@ class AcroNetDecoyActivity : AppCompatActivity() {
     }
 
     private fun launchAcroNet() {
+        val root = window.decorView.findViewWithTag<View>("decoy_root") ?: return
+        val parent = root.parent as ViewGroup
+
         // Haptic feedback to confirm trigger
-        val root = window.decorView
         root.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS)
 
-        // Launch the true AcroNet interface
-        // In production: BiometricPrompt → then launch
-        try {
-            val intent = Intent(this, Class.forName("com.acronet.ui.AcroNetMainActivity"))
-            startActivity(intent)
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        } catch (e: ClassNotFoundException) {
-            // AcroNet module not loaded — fail silently (forensic safety)
+        // 🛑 VISUAL VAULT EXECUTION: Shatter the decoy 🛑
+        com.acronet.ui.anim.AcroNetShatterTransition.shatter(root, parent) {
+            // Launch the true AcroNet interface
+            try {
+                val intent = Intent(this, Class.forName("com.acronet.ui.AcroNetMainActivity"))
+                startActivity(intent)
+                overridePendingTransition(0, 0) // No default animation
+                finish()
+            } catch (e: ClassNotFoundException) {
+                // AcroNet module not loaded — fail silently (forensic safety)
+            }
         }
     }
 
