@@ -1,8 +1,8 @@
 # AcroNet V2.0.0-HORIZON
 ## Post-Quantum Tactical Messenger — Architectural Manifesto
 
-**Classification:** Team Scrapyard — InfoSec Cyber Club, Gautam Buddha University
-**Lead Architect:** Ashish Kumar (Architect-Zero)
+**Classification:**  InfoSec Cyber Club
+**Lead Architect:** ACRO (Architect-Zero)
 **Sprint:** Horizon (April 2026)
 **Predecessor:** AcroNet V1.0.0-OBSIDIAN (ESP32/LoRa mesh, AES-256-GCM, Stealth Calculator)
 
