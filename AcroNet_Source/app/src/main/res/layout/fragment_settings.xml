@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="40dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/bg_card"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_settings_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?selectableItemBackgroundBorderless"
+                android:tint="@color/text_secondary"
+                android:contentDescription="Back" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⚙ Settings"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- ═══ SECURITY ═══ -->
+        <TextView
+            style="@style/SettingSectionHeader"
+            android:text="🛡  SECURITY" />
+
+        <LinearLayout style="@style/SettingRow">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView style="@style/SettingLabel" android:text="Biometric Lock" />
+                <TextView style="@style/SettingDesc" android:text="Require fingerprint to open app" />
+            </LinearLayout>
+            <Switch android:id="@+id/sw_biometric"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingRow">
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView style="@style/SettingLabel" android:text="Stealth Calculator Mode" />
+                <TextView style="@style/SettingDesc" android:text="Disguise app as a calculator on home screen" />
+            </LinearLayout>
+            <Switch android:id="@+id/sw_stealth"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Custom Calculator PIN -->
+        <LinearLayout style="@style/SettingRow"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView style="@style/SettingLabel" android:text="Calculator Unlock PIN" />
+            <TextView style="@style/SettingDesc" android:text="Set the secret number you type in the calculator + = to open Ghost Chat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <EditText android:id="@+id/et_stealth_pin"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_neon_bg"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:inputType="numberPassword"
+                    android:hint="1337"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView android:id="@+id/btn_save_pin"
+                    android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="  Save  "
+                    android:textColor="@color/accent_blue"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:background="?selectableItemBackground"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_qr_generate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="📷  SHOW QR INVITE"
+            android:textColor="@color/accent_blue"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="?selectableItemBackground"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="12dp" />
+
+        <TextView
+            android:id="@+id/btn_panic_wipe"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="🚨  PANIC WIPE — Destroy All Data"
+            android:textColor="#ef4444"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="?selectableItemBackground"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="4dp" />
+
+        <!-- ═══ MESSAGES ═══ -->
+        <TextView
+            style="@style/SettingSectionHeader"
+            android:text="💬  MESSAGES" />
+
+        <LinearLayout style="@style/SettingRow">
+            <TextView style="@style/SettingLabel" android:text="Disappearing Messages"
+                android:layout_width="0dp" android:layout_weight="1" />
+            <Spinner android:id="@+id/spinner_disappear"
+                android:layout_width="150dp" android:layout_height="36dp"
+                android:background="@drawable/input_neon_bg"
+                android:popupBackground="@color/bg_card" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingRow">
+            <TextView style="@style/SettingLabel" android:text="Font Size"
+                android:layout_width="0dp" android:layout_weight="1" />
+            <Spinner android:id="@+id/spinner_font_size"
+                android:layout_width="150dp" android:layout_height="36dp"
+                android:background="@drawable/input_neon_bg"
+                android:popupBackground="@color/bg_card" />
+        </LinearLayout>
+
+        <!-- ═══ NOTIFICATIONS ═══ -->
+        <TextView
+            style="@style/SettingSectionHeader"
+            android:text="🔔  NOTIFICATIONS" />
+
+        <LinearLayout style="@style/SettingRow">
+            <TextView style="@style/SettingLabel" android:text="Message Notifications"
+                android:layout_width="0dp" android:layout_weight="1" />
+            <Switch android:id="@+id/sw_notifications"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/SettingRow">
+            <TextView style="@style/SettingLabel" android:text="Vibration"
+                android:layout_width="0dp" android:layout_weight="1" />
+            <Switch android:id="@+id/sw_vibration"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- ═══ NETWORK ═══ -->
+        <TextView
+            style="@style/SettingSectionHeader"
+            android:text="🌐  NETWORK" />
+
+        <LinearLayout style="@style/SettingRow"
+            android:orientation="vertical"
+            android:gravity="start">
+
+            <TextView style="@style/SettingLabel" android:text="ESP32 IP Address" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="6dp">
+
+                <EditText android:id="@+id/et_esp32_ip"
+                    android:layout_width="0dp" android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_neon_bg"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:paddingStart="12dp" android:paddingEnd="12dp"
+                    android:inputType="text"
+                    android:hint="192.168.4.1"
+                    android:textColorHint="@color/text_hint" />
+
+                <TextView android:id="@+id/btn_save_ip"
+                    android:layout_width="wrap_content" android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="  Save  "
+                    android:textColor="@color/accent_blue"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:background="?selectableItemBackground"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ═══ ABOUT ═══ -->
+        <TextView
+            style="@style/SettingSectionHeader"
+            android:text="ℹ️  ABOUT" />
+
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ghost Chat v3.0"
+            android:textColor="@color/text_hint"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="24dp" />
+
+    </LinearLayout>
+</ScrollView>

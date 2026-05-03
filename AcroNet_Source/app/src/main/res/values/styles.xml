@@ -1,0 +1,75 @@
+<resources>
+    <!-- Settings styles -->
+    <style name="SettingSectionHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#60a5fa</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="SettingRow">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="SettingLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#f1f5f9</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="SettingDesc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#64748b</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!-- Calculator button styles for Stealth Mode -->
+    <style name="CalcBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">#e0e0e0</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:backgroundTint">#2a2a4a</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="CalcBtnOp">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">#60a5fa</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:backgroundTint">#1e1e3a</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="CalcBtnEq">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:backgroundTint">#2563eb</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+</resources>
